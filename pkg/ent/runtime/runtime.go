@@ -2,7 +2,7 @@
 
 package runtime
 
-// The schema-stitching logic is generated in github.com/rodrigo-brito/ninjabot/pkg/ent/runtime.go
+// The schema-stitching logic is generated in github.com/enorith/ninjabot/pkg/ent/runtime.go
 
 const (
 	Version = "v0.8.0"                                          // Version of ent codegen.

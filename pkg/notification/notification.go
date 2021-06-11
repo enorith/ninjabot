@@ -1,6 +1,6 @@
 package notification
 
-import "github.com/rodrigo-brito/ninjabot/pkg/model"
+import "github.com/enorith/ninjabot/pkg/model"
 
 type Notifier interface {
 	Notify(string)

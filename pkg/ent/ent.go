@@ -10,7 +10,7 @@ import (
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/order"
+	"github.com/enorith/ninjabot/pkg/ent/order"
 )
 
 // ent aliases to avoid import conflicts in user's code.

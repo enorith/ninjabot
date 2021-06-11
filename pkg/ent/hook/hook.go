@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/ent"
+	"github.com/enorith/ninjabot/pkg/ent"
 )
 
 // The OrderFunc type is an adapter to allow the use of ordinary

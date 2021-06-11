@@ -1,7 +1,7 @@
 ![image](https://user-images.githubusercontent.com/7620947/119247309-b69d1580-bb5e-11eb-9d81-4495dfc45f21.png)
 
-[![tests](https://github.com/rodrigo-brito/ninjabot/actions/workflows/ci.yaml/badge.svg)](https://github.com/rodrigo-brito/ninjabot/actions/workflows/ci.yaml)
-[![Go Reference](https://pkg.go.dev/badge/github.com/rodrigo-brito/ninjabot.svg)](https://pkg.go.dev/github.com/rodrigo-brito/ninjabot)
+[![tests](https://github.com/enorith/ninjabot/actions/workflows/ci.yaml/badge.svg)](https://github.com/enorith/ninjabot/actions/workflows/ci.yaml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/enorith/ninjabot.svg)](https://pkg.go.dev/github.com/enorith/ninjabot)
 
 A fast cryptocurrency trading bot framework implemented in Go. Ninjabot permits users to create and test custom strategies for spot markets. 
 
@@ -9,7 +9,7 @@ A fast cryptocurrency trading bot framework implemented in Go. Ninjabot permits 
 
 ## Installation
 
-`go get -u github.com/rodrigo-brito/ninjabot/...`
+`go get -u github.com/enorith/ninjabot/...`
 
 ## Examples of Usage
 
@@ -21,7 +21,7 @@ Check [examples](examples) directory:
 
 ### CLI
 
-To download historical data you can download ninjabot CLI from [release page](https://github.com/rodrigo-brito/ninjabot/releases)
+To download historical data you can download ninjabot CLI from [release page](https://github.com/enorith/ninjabot/releases)
 - Download 30 days: `ninjabot download --pair BTCUSDT --timeframe 1d --days 30 --output ./btc.csv`
 
 ### Backtesting Example
@@ -87,4 +87,4 @@ Chart available at http://localhost:8080
 
 ### Exchanges:
 
-Currently, we only support [Binance](https://www.binance.com/en?ref=35723227) exchange. If you want to include support for other exchanges, you need to implement a new `struct` that implements the interface [`Exchange`](https://github.com/rodrigo-brito/ninjabot/blob/main/pkg/exchange/exchange.go#L22-L41). You can check some examples in [exchange](./pkg/exchange) directory.
+Currently, we only support [Binance](https://www.binance.com/en?ref=35723227) exchange. If you want to include support for other exchanges, you need to implement a new `struct` that implements the interface [`Exchange`](https://github.com/enorith/ninjabot/blob/main/pkg/exchange/exchange.go#L22-L41). You can check some examples in [exchange](./pkg/exchange) directory.

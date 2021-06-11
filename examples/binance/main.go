@@ -5,11 +5,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/rodrigo-brito/ninjabot"
-	"github.com/rodrigo-brito/ninjabot/examples/strategies"
-	"github.com/rodrigo-brito/ninjabot/pkg/exchange"
-	"github.com/rodrigo-brito/ninjabot/pkg/model"
-	"github.com/rodrigo-brito/ninjabot/pkg/notification"
+	"github.com/enorith/ninjabot"
+	"github.com/enorith/ninjabot/examples/strategies"
+	"github.com/enorith/ninjabot/pkg/exchange"
+	"github.com/enorith/ninjabot/pkg/model"
+	"github.com/enorith/ninjabot/pkg/notification"
 )
 
 func main() {

@@ -5,9 +5,9 @@ package enttest
 import (
 	"context"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/ent"
+	"github.com/enorith/ninjabot/pkg/ent"
 	// required by schema hooks.
-	_ "github.com/rodrigo-brito/ninjabot/pkg/ent/runtime"
+	_ "github.com/enorith/ninjabot/pkg/ent/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
 )

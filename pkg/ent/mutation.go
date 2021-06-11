@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/order"
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/predicate"
+	"github.com/enorith/ninjabot/pkg/ent/order"
+	"github.com/enorith/ninjabot/pkg/ent/predicate"
 
 	"entgo.io/ent"
 )

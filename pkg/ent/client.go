@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/migrate"
+	"github.com/enorith/ninjabot/pkg/ent/migrate"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/order"
+	"github.com/enorith/ninjabot/pkg/ent/order"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"

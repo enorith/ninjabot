@@ -9,8 +9,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/order"
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/predicate"
+	"github.com/enorith/ninjabot/pkg/ent/order"
+	"github.com/enorith/ninjabot/pkg/ent/predicate"
 )
 
 // OrderDelete is the builder for deleting a Order entity.

@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/data"
-	"github.com/rodrigo-brito/ninjabot/pkg/exchange"
+	"github.com/enorith/ninjabot/pkg/data"
+	"github.com/enorith/ninjabot/pkg/exchange"
 
 	"github.com/urfave/cli/v2"
 )

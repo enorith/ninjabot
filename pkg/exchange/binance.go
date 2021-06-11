@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/model"
+	"github.com/enorith/ninjabot/pkg/model"
 
 	"github.com/adshao/go-binance/v2"
 	log "github.com/sirupsen/logrus"

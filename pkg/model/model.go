@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/series"
+	"github.com/enorith/ninjabot/pkg/series"
 )
 
 type SideType string

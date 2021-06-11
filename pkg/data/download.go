@@ -8,7 +8,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/exchange"
+	"github.com/enorith/ninjabot/pkg/exchange"
 	"github.com/xhit/go-str2duration/v2"
 )
 

@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/model"
+	"github.com/enorith/ninjabot/pkg/model"
 
 	log "github.com/sirupsen/logrus"
 )

@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"entgo.io/ent/dialect/sql"
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/order"
+	"github.com/enorith/ninjabot/pkg/ent/order"
 )
 
 // Order is the model entity for the Order schema.

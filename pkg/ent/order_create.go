@@ -10,7 +10,7 @@ import (
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/order"
+	"github.com/enorith/ninjabot/pkg/ent/order"
 )
 
 // OrderCreate is the builder for creating a Order entity.

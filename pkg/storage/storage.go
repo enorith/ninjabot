@@ -7,8 +7,8 @@ import (
 	"entgo.io/ent/dialect"
 
 	//nolint
+	"github.com/enorith/ninjabot/pkg/ent"
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/rodrigo-brito/ninjabot/pkg/ent"
 )
 
 func FromMemory() (*ent.Client, error) {

@@ -8,14 +8,14 @@ import (
 
 	"github.com/olekukonko/tablewriter"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/notification"
+	"github.com/enorith/ninjabot/pkg/notification"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/ent"
-	"github.com/rodrigo-brito/ninjabot/pkg/exchange"
-	"github.com/rodrigo-brito/ninjabot/pkg/model"
-	"github.com/rodrigo-brito/ninjabot/pkg/order"
-	"github.com/rodrigo-brito/ninjabot/pkg/storage"
-	"github.com/rodrigo-brito/ninjabot/pkg/strategy"
+	"github.com/enorith/ninjabot/pkg/ent"
+	"github.com/enorith/ninjabot/pkg/exchange"
+	"github.com/enorith/ninjabot/pkg/model"
+	"github.com/enorith/ninjabot/pkg/order"
+	"github.com/enorith/ninjabot/pkg/storage"
+	"github.com/enorith/ninjabot/pkg/strategy"
 
 	log "github.com/sirupsen/logrus"
 )
@@ -37,12 +37,20 @@ type CandleSubscriber interface {
 	OnCandle(model.Candle)
 }
 
+type StrategyController interface {
+	CandleSubscriber
+	Start()
+}
+
+type StrategyControllerRegister func(pair string, settings model.Settings, strategy strategy.Strategy, broker exchange.Broker) StrategyController
+
 type NinjaBot struct {
-	storage  *ent.Client
-	settings model.Settings
-	exchange exchange.Exchange
-	strategy strategy.Strategy
-	notifier notification.Notifier
+	storage                    *ent.Client
+	settings                   model.Settings
+	exchange                   exchange.Exchange
+	strategy                   strategy.Strategy
+	notifier                   notification.Notifier
+	strategyControllerRegister StrategyControllerRegister
 
 	orderController *order.Controller
 	orderFeed       *order.Feed
@@ -78,6 +86,12 @@ func NewBot(ctx context.Context, settings model.Settings, exch exchange.Exchange
 		bot.orderController = order.NewController(ctx, exch, bot.storage, bot.orderFeed, bot.notifier)
 	}
 
+	if bot.strategyControllerRegister == nil {
+		bot.strategyControllerRegister = func(pair string, settings model.Settings, s strategy.Strategy, broker exchange.Broker) StrategyController {
+			return strategy.NewStrategyController(pair, settings, s, broker)
+		}
+	}
+
 	return bot, nil
 }
 
@@ -103,6 +117,12 @@ func WithNotifier(notifier notification.Notifier) Option {
 func WithCandleSubscription(subscriber CandleSubscriber) Option {
 	return func(bot *NinjaBot) {
 		bot.SubscribeCandle(subscriber)
+	}
+}
+
+func WithStrategyController(register StrategyControllerRegister) Option {
+	return func(bot *NinjaBot) {
+		bot.strategyControllerRegister = register
 	}
 }
 
@@ -168,7 +188,8 @@ func (n *NinjaBot) Summary() {
 func (n *NinjaBot) Run(ctx context.Context) error {
 	for _, pair := range n.settings.Pairs {
 		// setup and subscribe strategy to data feed (candles)
-		strategyController := strategy.NewStrategyController(pair, n.settings, n.strategy, n.orderController)
+		strategyController := n.strategyControllerRegister(pair, n.settings, n.strategy, n.orderController)
+
 		n.dataFeed.Subscribe(pair, n.strategy.Timeframe(), strategyController.OnCandle, true)
 
 		// preload candles to warmup strategy

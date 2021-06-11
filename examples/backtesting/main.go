@@ -3,12 +3,12 @@ package main
 import (
 	"context"
 
-	"github.com/rodrigo-brito/ninjabot"
-	"github.com/rodrigo-brito/ninjabot/examples/strategies"
-	"github.com/rodrigo-brito/ninjabot/pkg/exchange"
-	"github.com/rodrigo-brito/ninjabot/pkg/model"
-	"github.com/rodrigo-brito/ninjabot/pkg/plot"
-	"github.com/rodrigo-brito/ninjabot/pkg/storage"
+	"github.com/enorith/ninjabot"
+	"github.com/enorith/ninjabot/examples/strategies"
+	"github.com/enorith/ninjabot/pkg/exchange"
+	"github.com/enorith/ninjabot/pkg/model"
+	"github.com/enorith/ninjabot/pkg/plot"
+	"github.com/enorith/ninjabot/pkg/storage"
 
 	log "github.com/sirupsen/logrus"
 )

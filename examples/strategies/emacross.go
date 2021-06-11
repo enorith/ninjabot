@@ -1,8 +1,8 @@
 package strategies
 
 import (
-	"github.com/rodrigo-brito/ninjabot/pkg/exchange"
-	"github.com/rodrigo-brito/ninjabot/pkg/model"
+	"github.com/enorith/ninjabot/pkg/exchange"
+	"github.com/enorith/ninjabot/pkg/model"
 
 	"github.com/markcheno/go-talib"
 	log "github.com/sirupsen/logrus"

@@ -1,7 +1,7 @@
 package order
 
 import (
-	"github.com/rodrigo-brito/ninjabot/pkg/model"
+	"github.com/enorith/ninjabot/pkg/model"
 )
 
 type DataFeed struct {

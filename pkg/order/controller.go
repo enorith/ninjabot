@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rodrigo-brito/ninjabot/pkg/ent"
-	"github.com/rodrigo-brito/ninjabot/pkg/ent/order"
-	"github.com/rodrigo-brito/ninjabot/pkg/exchange"
-	"github.com/rodrigo-brito/ninjabot/pkg/model"
-	"github.com/rodrigo-brito/ninjabot/pkg/notification"
+	"github.com/enorith/ninjabot/pkg/ent"
+	"github.com/enorith/ninjabot/pkg/ent/order"
+	"github.com/enorith/ninjabot/pkg/exchange"
+	"github.com/enorith/ninjabot/pkg/model"
+	"github.com/enorith/ninjabot/pkg/notification"
 
 	"github.com/olekukonko/tablewriter"
 	log "github.com/sirupsen/logrus"
