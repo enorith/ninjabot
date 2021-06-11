@@ -148,6 +148,10 @@ func (n *NinjaBot) SubscribeOrder(subscriptions ...OrderSubscriber) {
 	}
 }
 
+func (n *NinjaBot) OrderController() *order.Controller {
+	return n.orderController
+}
+
 func (n *NinjaBot) Summary() {
 	var (
 		total float64
