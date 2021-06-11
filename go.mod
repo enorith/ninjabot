@@ -1,4 +1,4 @@
-module github.com/rodrigo-brito/ninjabot
+module github.com/enorith/ninjabot
 
 go 1.16
 
